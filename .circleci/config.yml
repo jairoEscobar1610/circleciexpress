@@ -13,11 +13,11 @@ jobs:
             - run:
                 command: npm test --reporter mocha-junit-reporter
                 environment:
-                  MOCHA_FILE: ~/test-results/mocha/results.xml
+                  MOCHA_FILE: test-results/mocha/results.xml
             - store_test_results:
-                path: ~/test-results/mocha
+                path: test-results/mocha
             - store_artifacts:
-                path: ~/test-results/mocha
+                path: test-results/mocha
 workflows:
     build-and-test:
       jobs:
