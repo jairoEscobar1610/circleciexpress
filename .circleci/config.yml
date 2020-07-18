@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: npm install
             - run:
-                command: npm test --reporter mocha-junit-reporter
+                command: npm test
                 environment:
                   MOCHA_FILE: test-results/mocha/results.xml
             - store_test_results:
